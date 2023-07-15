@@ -1,0 +1,50 @@
+To compile all (main + external) files, do "make -f a1.mk"
+After testing, executables can be removed with "make clean -f a1.mk"
+
+Commands and their usage:
+
+1) cd
+	cd [directory] = change directory as specified
+	cd ~ = change directory to home
+	cd / = change directory to root
+
+2) echo
+	echo "[string]" = display string 
+	echo -n "[string]" = display string without trailing newline character
+	echo -e "[string]" = enable interpretation of backslash escapes within string such as
+	\b ->  removes space between text
+	\n -> creates a new line
+	\t -> creates a tab space
+
+3) pwd
+	pwd = display current working directory 
+	pwd -L = display current working directory 
+	pwd -P = display current working directory 
+
+4) ls
+	ls = list files and directories present in current directory
+	ls -a = list files and directories (including hidden) present in current directory
+	ls -l = list files and directories along with related information
+
+5) cat
+	cat [file1] [file2] ... = display concatenated content of files 
+	cat -n [file1] [file2] ... = display concatenated content of files with file line numbers
+	cat -e [file1] [file2] ... = display concatenated content of files with end of line highlighted ($)
+
+6) date
+	date = display system date and time
+	date -u = display GM date and time
+ 	date -r [file] = display last modified timestamp of file
+
+7) rm
+	rm [file1] [file2] ... = remove files
+	rm -i [file1] [file2] ... = remove files with a confirmation prompt
+	rm -d [directory1] [directory2] ... = remove empty directories
+
+8) mkdir
+	mkdir [name] = make a directory with given name 
+	mkdir -v [name] = make a directory with given name and display message
+	mkdir -m [zzz] [name] = make a directory with given name and permissions "0zzz" where 0 <= z <= 7
+
+Written by Tanishq Jain, 2021294
+# Modify path in execve calls to same directory (instead of desktop) 
